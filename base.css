@@ -1,10 +1,92 @@
+/*
+
+--azure-web: #DFEDF1ff;
+--white: #FAFCFDff;
+--verdigris: #45AAACff;
+--light-blue: #BAE1E3ff;
+--blue-munsell: #4B90A6ff;
+
+--azure-web: hsla(193, 39%, 91%, 1);
+--white: hsla(200, 43%, 99%, 1);
+--verdigris: hsla(181, 43%, 47%, 1);
+--light-blue: hsla(183, 42%, 81%, 1);
+--blue-munsell: hsla(195, 38%, 47%, 1);
+
+
+$azure-web: #DFEDF1ff;
+$white: #FAFCFDff;
+$verdigris: #45AAACff;
+$light-blue: #BAE1E3ff;
+$blue-munsell: #4B90A6ff;
+
+
+$azure-web: hsla(193, 39%, 91%, 1);
+$white: hsla(200, 43%, 99%, 1);
+$verdigris: hsla(181, 43%, 47%, 1);
+$light-blue: hsla(183, 42%, 81%, 1);
+$blue-munsell: hsla(195, 38%, 47%, 1);
+
+
+$azure-web: rgba(223, 237, 241, 1);
+$white: rgba(250, 252, 253, 1);
+$verdigris: rgba(69, 170, 172, 1);
+$light-blue: rgba(186, 225, 227, 1);
+$blue-munsell: rgba(75, 144, 166, 1);
+
+
+$gradient-top: linear-gradient(0deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-right: linear-gradient(90deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-bottom: linear-gradient(180deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-left: linear-gradient(270deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-top-right: linear-gradient(45deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-bottom-right: linear-gradient(135deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-top-left: linear-gradient(225deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-bottom-left: linear-gradient(315deg, #DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+$gradient-radial: radial-gradient(#DFEDF1ff, #FAFCFDff, #45AAACff, #BAE1E3ff, #4B90A6ff);
+
+*/
+
 html, body {
     margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 100%;
 }
+
 body {
-    background-color: #f1f1f1;
+    background: linear-gradient(#F1F6F9, #E6F1F5, #BCD2DD);
     display: flex;
     justify-content: center;
+}
+
+h1, h2, legend {
+    color: #06374c;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    font-size: large;
+    letter-spacing: 0.05em;
+}
+
+form label {
+    color: #06374c;
+    font-size: medium;
+}
+
+form fieldset {
+    border: 1px solid #06374c;
+    padding: 1em;
+}
+
+form fieldset input, textarea {
+    border: 1px solid #06374c;
+    margin: 0.3em auto;
+    padding: 0.3em;
+    width: 100%;
+}
+
+
+p {
+    margin: 0.5em 0 1.5em 0;
+    text-align: justify;
 }
 
 .wrapper {
@@ -13,26 +95,94 @@ body {
     margin: 0 auto;
     background-color: aquamarine;
 }
+
 .main {
     display: flex;
     flex-flow: column;
-    width: 85%;
+    width: 80%;
 }
+
 .menu {
-    width: 15%;
-    background-color: aqua;
-    padding: 10px 20px 0px;
+    width: 20%;
+    background: #E6F1F5; 
+    display: block;
+    padding: 10px 20px;
 }
+
+.menu ul {
+    display: block;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    display: block;
+    list-style-type: none;
+    margin: 0.5em auto;
+    padding: 0.5em 0;
+    width: 100%;
+}
+
+.menu ul li a {
+    color: #06374c;
+    font-weight: 600;
+    font-size: medium;
+    text-decoration: none;
+    margin: 0 0.5em;
+}
+
+.menu ul li:hover {
+    background: #BCD2DD;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
 .header {
-    background-color: rgb(5, 108, 108);
+    background: linear-gradient(#F1F6F9, #E6F1F5, #BCD2DD); 
     min-height: 150px;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
 }
+
+.header img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .content {
     background-color: white;
     min-height: 300px;
     padding: 20px;
 }
+
+.content table {
+    color: #3a6f81;
+}
+
+.content table th {
+    background: #d0e8f2;
+    padding: 0.5em;
+}
+
+.content table td {
+    background: #BCD2DD;
+    padding: 0.5em;
+    font-weight: 700;
+}
+
 .footer {
-    background-color: rgb(99, 56, 240);
-    min-height: 150px;
+    background: #06374c;
+    text-align: center;
+    height: fit-content;
+    padding: 1em 0;
+}
+
+.footer h3 {
+    color: #E6F1F5;
+    font-size: medium;
+    margin: 0.3em 0;
 }
